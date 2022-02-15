@@ -25,6 +25,7 @@ router.get('/all', async(req, res)=>{
 }); //GET ALL/
 
 
+
 router.get('/byid/:id', async (req, res)=>{
     try{
         const {id} = req.params;
