@@ -57,7 +57,7 @@ router.put('/update/:id', async(req, res)=>{
     try{
         const {identidad, fecha, descripcion, observacion, registro, ultimaActualizacion} = req.body;
         const {id} = req.params;
-        const result = await expedienteModel.updateOne(identidad, fecha, descripcion, observacion, registro, ultimaActualizacion);
+        const result = await expedienteModel.updateOne(id, identidad, fecha, descripcion, observacion, registro, ultimaActualizacion);
         res.status(200).json({status:'ok', result});
     }catch(ex){
         console.log(ex);
